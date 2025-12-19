@@ -5,162 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="JELABBC - Control Total de Gestión, Cobranza y Acceso con IA - Plataforma inteligente para la administración empresarial">
     <title>JELABBC - Control Total de Gestión, Cobranza y Acceso con IA</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-        
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1a1a1a;
-        }
-        
-        .btn-ingreso {
-            background: #5b4cff;
-            color: #ffffff;
-            padding: 12px 32px;
-            border: none;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .btn-ingreso:hover {
-            background: #4a3ce6;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(91,76,255,0.3);
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 80px 20px 60px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: clamp(32px, 5vw, 64px);
-            font-weight: 800;
-            margin-bottom: 40px;
-            line-height: 1.2;
-            color: #1a1a1a;
-        }
-        
-        .logo-circle {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 60px rgba(102,126,234,0.3);
-        }
-        
-        .logo-circle img {
-            width: 140px;
-            height: auto;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .feature-card {
-            background: #f8f9fa;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-        }
-        
-        .feature-image {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-        }
-        
-        .feature-content {
-            padding: 30px;
-        }
-        
-        .feature-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-        
-        .feature-text {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #f8f9fa;
-            margin-top: 80px;
-            color: #666;
-        }
-        
-        @media (max-width: 768px) {
-            .header {
-                padding: 15px 20px;
-            }
-            
-            .hero {
-                padding: 60px 20px 40px;
-            }
-            
-            .logo-circle {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-size: 24px; font-weight: bold; color: #1a1a1a; }
+        .btn-ingreso { background: #5b4cff; color: #fff; padding: 12px 32px; border: none; border-radius: 30px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; }
+        .btn-ingreso:hover { background: #4a3ce6; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(91,76,255,0.3); }
+        .hero { text-align: center; padding: 80px 20px 40px; max-width: 1200px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; margin-bottom: 60px; line-height: 1.2; }
+        .logo-img { width: 200px; height: 200px; margin: 0 auto 60px; border-radius: 50%; overflow: hidden; }
+        .logo-img img { width: 100%; height: 100%; object-fit: cover; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+        .feature-image { width: 100%; height: 240px; object-fit: cover; }
+        .feature-content { padding: 30px; }
+        .feature-title { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+        .feature-text { color: #666; font-size: 15px; line-height: 1.6; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 60px 20px; max-width: 1200px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border-radius: 20px; text-align: center; }
+        .stat-number { font-size: 48px; font-weight: 800; margin-bottom: 10px; }
+        .stat-text { font-size: 18px; opacity: 0.9; }
+        .cta-section { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        .cta-section h2 { font-size: 40px; font-weight: 800; margin-bottom: 20px; }
+        .cta-section p { font-size: 18px; color: #666; margin-bottom: 40px; }
+        .footer { background: #1a1a1a; color: #fff; padding: 60px 20px 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
+        .footer-section h3 { font-size: 18px; margin-bottom: 15px; }
+        .footer-section p, .footer-section a { color: #aaa; text-decoration: none; display: block; margin-bottom: 10px; }
+        .footer-section a:hover { color: #5b4cff; }
+        .social-links { display: flex; gap: 15px; margin-top: 15px; }
+        .social-links a { display: inline-block; padding: 10px 20px; background: #333; border-radius: 8px; color: #fff; text-decoration: none; transition: background 0.3s; }
+        .social-links a:hover { background: #5b4cff; }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #666; font-size: 14px; }
+        @media (max-width: 768px) { .header { padding: 15px 20px; } .hero { padding: 60px 20px 40px; } .features { grid-template-columns: 1fr; padding: 20px; } .stats { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -171,44 +50,77 @@
 
     <section class="hero">
         <h1>Control Total de Gestión, Cobranza y Acceso con IA</h1>
-        <div class="logo-circle">
-            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="70" cy="70" r="60" fill="white" opacity="0.9"/>
-                <path d="M70 30C47.9 30 30 47.9 30 70C30 92.1 47.9 110 70 110C92.1 110 110 92.1 110 70C110 47.9 92.1 30 70 30ZM70 100C53.4 100 40 86.6 40 70C40 53.4 53.4 40 70 40C86.6 40 100 53.4 100 70C100 86.6 86.6 100 70 100Z" fill="#5b4cff"/>
-                <circle cx="70" cy="70" r="20" fill="#5b4cff"/>
-            </svg>
+        <div class="logo-img">
+            <img src="https://framerusercontent.com/images/CvjT0mivgfBZUJGNuLaD4GCO8.png" alt="JELABBC Logo" loading="eager">
         </div>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Control de Acceso" class="feature-image" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop&q=80" alt="Control de Acceso Inteligente" class="feature-image" loading="lazy">
             <div class="feature-content">
-                <h3 class="feature-title">Control de Acceso Inteligente</h3>
-                <p class="feature-text">Sistema avanzado de control de acceso con tecnología biométrica y reconocimiento facial impulsado por IA.</p>
+                <h3 class="feature-title">Acceso Inteligente.</h3>
+                <p class="feature-text">Control de acceso (TAG, RFID, QR, reconocimiento facial) para seguridad moderna. Iconografía: Shield para Seguridad.</p>
             </div>
         </div>
         
         <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Gestión Empresarial" class="feature-image" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80" alt="Cobranza con IA" class="feature-image" loading="lazy">
             <div class="feature-content">
-                <h3 class="feature-title">Gestión Empresarial Total</h3>
-                <p class="feature-text">Plataforma completa para administrar todos los aspectos de tu negocio con análisis en tiempo real y reportes automáticos.</p>
+                <h3 class="feature-title">Cobranza con IA.</h3>
+                <p class="feature-text">Cobranza inteligente con IA en tiempo real para maximizar ingresos. Iconografía: Robot para IA.</p>
             </div>
         </div>
         
         <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Cobranza con IA" class="feature-image" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&h=400&fit=crop&q=80" alt="IoT Medidores Inteligentes" class="feature-image" loading="lazy">
             <div class="feature-content">
-                <h3 class="feature-title">Cobranza Automatizada</h3>
-                <p class="feature-text">Sistema inteligente de cobranza que optimiza el flujo de caja y reduce la morosidad con algoritmos de machine learning.</p>
+                <h3 class="feature-title">IoT.</h3>
+                <p class="feature-text">IoT: medidores de agua inteligentes.</p>
             </div>
         </div>
     </section>
 
+    <section class="stats">
+        <div>
+            <div class="stat-number">100+</div>
+            <div class="stat-text">empresas nos confían</div>
+        </div>
+        <div>
+            <div class="stat-number">300x</div>
+            <div class="stat-text">procesos más ágiles</div>
+        </div>
+        <div>
+            <div class="stat-number">200%</div>
+            <div class="stat-text">mejora en seguridad</div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Maximiza tu control y eficiencia</h2>
+        <p>Descubre cómo JELABBC puede revolucionar tu administración y seguridad.</p>
+        <a href="https://jolly-forest-06e71e410.4.azurestaticapps.net" class="btn-ingreso">Comenzar Ahora</a>
+    </section>
+
     <footer class="footer">
-        <p>&copy; 2025 JELABBC. Todos los derechos reservados.</p>
-        <p style="margin-top: 10px; font-size: 14px;">JELABBC.COM.MX</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: ventas@jelabbc.com.mx</p>
+                <p>Tel: +52 33 34948103</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/jelabbc?igsh=NTZzdHZ2ZXhqOTA2&utm_source=qr" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/in/leo-durán-53744b30/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 JELABBC. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 14px;">JELABBC.COM.MX</p>
+        </div>
     </footer>
 </body>
 </html>
