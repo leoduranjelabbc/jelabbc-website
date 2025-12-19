@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JELABBC - Control Total de Gestión, Cobranza y Acceso con IA - Plataforma inteligente para la administración empresarial">
     <title>JELABBC - Control Total de Gestión, Cobranza y Acceso con IA</title>
     <style>
         * {
@@ -10,85 +11,204 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
             line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
         }
-        header {
-            background: #fff;
-            padding: 20px 5%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 40px;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
+        
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #1a1a1a;
         }
+        
         .btn-ingreso {
-            background: #6c5ce7;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
+            background: #5b4cff;
+            color: #ffffff;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
             font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
         }
+        
+        .btn-ingreso:hover {
+            background: #4a3ce6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(91,76,255,0.3);
+        }
+        
         .hero {
             text-align: center;
-            padding: 80px 5%;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 80px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
+        
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 30px;
-            color: #2d3436;
+            font-size: clamp(32px, 5vw, 64px);
+            font-weight: 800;
+            margin-bottom: 40px;
+            line-height: 1.2;
+            color: #1a1a1a;
         }
-        .stats {
+        
+        .logo-circle {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 40px;
-            margin: 60px 5%;
-            flex-wrap: wrap;
+            box-shadow: 0 20px 60px rgba(102,126,234,0.3);
         }
-        .stat {
+        
+        .logo-circle img {
+            width: 140px;
+            height: auto;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        
+        .feature-content {
+            padding: 30px;
+        }
+        
+        .feature-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        
+        .feature-text {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .footer {
             text-align: center;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            margin-top: 80px;
+            color: #666;
         }
-        .stat-number {
-            font-size: 48px;
-            font-weight: bold;
-            color: #6c5ce7;
-        }
-        .stat-label {
-            color: #636e72;
-            margin-top: 10px;
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .hero {
+                padding: 60px 20px 40px;
+            }
+            
+            .logo-circle {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">JELABBC®</div>
-        <a href="https://www.jelabbc.com.mx" class="btn-ingreso">INGRESO</a>
+        <a href="https://jolly-forest-06e71e410.4.azurestaticapps.net" class="btn-ingreso">INGRESO</a>
     </header>
-    
+
     <section class="hero">
         <h1>Control Total de Gestión, Cobranza y Acceso con IA</h1>
-    </section>
-    
-    <section class="stats">
-        <div class="stat">
-            <div class="stat-number">100+</div>
-            <div class="stat-label">empresas han confiado</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">300x</div>
-            <div class="stat-label">potencial ROI rapido</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">200%</div>
-            <div class="stat-label">aumento en ingresos</div>
+        <div class="logo-circle">
+            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="70" cy="70" r="60" fill="white" opacity="0.9"/>
+                <path d="M70 30C47.9 30 30 47.9 30 70C30 92.1 47.9 110 70 110C92.1 110 110 92.1 110 70C110 47.9 92.1 30 70 30ZM70 100C53.4 100 40 86.6 40 70C40 53.4 53.4 40 70 40C86.6 40 100 53.4 100 70C100 86.6 86.6 100 70 100Z" fill="#5b4cff"/>
+                <circle cx="70" cy="70" r="20" fill="#5b4cff"/>
+            </svg>
         </div>
     </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Control de Acceso" class="feature-image" loading="lazy">
+            <div class="feature-content">
+                <h3 class="feature-title">Control de Acceso Inteligente</h3>
+                <p class="feature-text">Sistema avanzado de control de acceso con tecnología biométrica y reconocimiento facial impulsado por IA.</p>
+            </div>
+        </div>
+        
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Gestión Empresarial" class="feature-image" loading="lazy">
+            <div class="feature-content">
+                <h3 class="feature-title">Gestión Empresarial Total</h3>
+                <p class="feature-text">Plataforma completa para administrar todos los aspectos de tu negocio con análisis en tiempo real y reportes automáticos.</p>
+            </div>
+        </div>
+        
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Cobranza con IA" class="feature-image" loading="lazy">
+            <div class="feature-content">
+                <h3 class="feature-title">Cobranza Automatizada</h3>
+                <p class="feature-text">Sistema inteligente de cobranza que optimiza el flujo de caja y reduce la morosidad con algoritmos de machine learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 JELABBC. Todos los derechos reservados.</p>
+        <p style="margin-top: 10px; font-size: 14px;">JELABBC.COM.MX</p>
+    </footer>
 </body>
 </html>
